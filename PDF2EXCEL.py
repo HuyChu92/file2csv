@@ -4,7 +4,7 @@ from datetime import datetime
 from tabula import read_pdf
 from tabulate import tabulate
 
-df = tabula.read_pdf(r'C:\Users\Robert\PycharmProjects\pythonProject1\test.pdf', pages="all")
+df = tabula.read_pdf(r'C:\Users\huy_c\source\repos\file2csv\test.pdf', pages="all")
 
 resultaat = []
 
@@ -33,12 +33,13 @@ for t in tijd[1:]:
     nieuw += verschil
 
 output['Verschil'] = cumulatieveTijd
-#print(output)
+print(output.dtypes)
 
-output.to_csv('output.csv')
+#output.to_csv('output.csv')
+output.to_excel('excel.xlsx')
 
 verschilDagen = tijd[-1] - tijd[0]
-print(verschilDagen)
+# print(verschilDagen)
 
 
 

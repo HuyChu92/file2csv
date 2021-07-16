@@ -9,7 +9,6 @@ from tkinter.ttk import *
 from startframe import Start
 
 
-
 class Mainframe(tk.Tk):
     """ Een 'MainFrame' object dat geinstantieerd wordt met tk.TK.
         Dit dient als venster van het programma en vanuit dit venster
@@ -20,7 +19,7 @@ class Mainframe(tk.Tk):
         self.frame = Start(self) # startframe
         self.frame.pack()
         self.file = None
-        self.path = None
+        self.current_dataframe = None
         self.resizable(False,False)
 
     def change(self, frame):
